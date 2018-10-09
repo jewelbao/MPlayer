@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ControlView">
+        <!-- 开始/暂停播放View -->
+        <attr name="startOrPauseView" format="reference" />
+        <!-- 播放进度View -->
+        <attr name="progressbar" format="reference" />
+        <!-- 是否显示缓冲进度 -->
+        <attr name="showProgressBufferView" format="boolean" />
+        <!-- 当前播放时间View -->
+        <attr name="playingTimeView" format="reference" />
+        <!-- 总播放时间View -->
+        <attr name="totalTimeView" format="reference" />
+        <!-- 标题View -->
+        <attr name="titleView" format="reference" />
+        <!-- 标题 -->
+        <attr name="title" format="string" />
+        <!-- 是否显示标题左侧图标 -->
+        <attr name="showTitleLeftIcon" format="boolean" />
+        <!-- 标题左侧图标资源ID -->
+        <attr name="titleLeftIcon" format="reference" />
+        <!-- 是否显示标题右侧图标 -->
+        <attr name="showTitleRightIcon" format="boolean" />
+        <!-- 标题右侧图标资源ID -->
+        <attr name="titleRightIcon" format="reference" />
+    </declare-styleable>
+</resources>
