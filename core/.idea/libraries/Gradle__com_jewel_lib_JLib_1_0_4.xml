@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.jewel.lib:JLib-1.0.4">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/JLib-1.0.4.aar/393e73f4c8605cd50e9a41c55ef7f529/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/JLib-1.0.4.aar/393e73f4c8605cd50e9a41c55ef7f529/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jewel.lib/JLib/1.0.4/356be039b8feadbfb49f17af413798d08f9674d4/JLib-1.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,5 +1,8 @@
 package com.jewel.mplayer;
 
+/**
+ * 默认的视频变更回调实现
+ */
 public class DefaultVideoChangeListener implements OnVideoChangeListener {
 
     @Override

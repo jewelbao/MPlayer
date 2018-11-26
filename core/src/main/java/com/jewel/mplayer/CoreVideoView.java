@@ -12,7 +12,7 @@ import com.jewel.mplayer.content.VideoData;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class CoreVideoView extends FrameLayout implements IControl, IAttrubite {
+public abstract class CoreVideoView extends FrameLayout implements IControl, IAttributes {
 
     public static final String TAG = "MPlayer";
 

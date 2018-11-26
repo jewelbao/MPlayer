@@ -1,5 +1,8 @@
 package com.jewel.mplayer;
 
+/**
+ * 视频状态变更监听
+ */
 public interface OnVideoChangeListener {
     /**
      * 准备播放
