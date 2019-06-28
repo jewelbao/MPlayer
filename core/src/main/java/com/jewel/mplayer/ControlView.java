@@ -160,6 +160,10 @@ public class ControlView extends FrameLayout implements View.OnClickListener {
         videoView.seekTo(videoView.getRealSeekPosition(millis));
     }
 
+    public void setMute(boolean needMute) {
+        videoView.setMute(needMute);
+    }
+
     // 初始化播放/暂停按钮和点击事件
     private void initStartOrPauseView(Activity context) {
         if (startOrPauseView == null) {

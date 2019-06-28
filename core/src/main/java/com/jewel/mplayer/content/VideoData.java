@@ -65,6 +65,11 @@ public class VideoData {
      */
     private boolean canLooping;
 
+    /**
+     * 是否静音
+     */
+    private boolean isMute;
+
     public VideoData(String path) {
         this(path, "");
     }
@@ -202,5 +207,13 @@ public class VideoData {
 
     public void setLooping(boolean canlooping) {
         this.canLooping = canlooping;
+    }
+
+    public void setMute(boolean mute) {
+        isMute = mute;
+    }
+
+    public boolean isMute() {
+        return isMute;
     }
 }

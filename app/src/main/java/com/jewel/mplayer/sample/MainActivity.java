@@ -3,7 +3,6 @@ package com.jewel.mplayer.sample;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 
 import com.jewel.lib.android.SnackbarUtil;
 import com.jewel.mplayer.ControlView;
@@ -11,7 +10,7 @@ import com.jewel.mplayer.OnControlViewListener;
 import com.jewel.mplayer.content.VideoData;
 import com.jewel.mplayer.system.SystemVideoView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     private SystemVideoView videoView;
     private ControlView controlView;
@@ -41,14 +40,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 SnackbarUtil.showAction(getWindow().getDecorView(), "哈哈哈哈，你点我了" + count);
             }
         });
-
-        Button btnBack = findViewById(R.id.btn_back);
-        Button btnForward = findViewById(R.id.btn_forward);
-        Button btnChangeTitle = findViewById(R.id.btn_change_title);
-
-        btnBack.setOnClickListener(this);
-        btnForward.setOnClickListener(this);
-        btnChangeTitle.setOnClickListener(this);
     }
 
     @Override
@@ -69,18 +60,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onDestroy();
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_back:
-                controlView.seekBack(1000*10);
-                break;
-            case R.id.btn_forward:
-                controlView.seekForward(1000*10);
-                break;
-            case R.id.btn_change_title:
-                controlView.setTitle("聪哥");
-                break;
-        }
+    public void seekBack(View view) {
+        controlView.seekBack(1000*10);
+    }
+
+    public void seekForward(View view) {
+        controlView.seekForward(1000*10);
+    }
+
+    public void changeTitle(View view) {
+        controlView.setTitle("聪哥");
+    }
+
+    public void mute(View view) {
+        controlView.setMute(!videoView.getVideo().isMute());
     }
 }

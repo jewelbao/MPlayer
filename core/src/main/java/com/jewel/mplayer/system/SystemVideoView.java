@@ -115,6 +115,14 @@ public class SystemVideoView extends CoreVideoView {
         videoView.getRootView().removeCallbacks(progressListener);
     }
 
+    private void setMute(MediaPlayer mp) {
+        if(isMute()) {
+            mp.setVolume(0f, 0f);
+        } else {
+            mp.setVolume(1f, 1f);
+        }
+    }
+
     private Runnable progressListener = new Runnable() {
         @Override
         public void run() {
@@ -128,6 +136,7 @@ public class SystemVideoView extends CoreVideoView {
     private MediaPlayer.OnPreparedListener onPreparedListener = new MediaPlayer.OnPreparedListener() {
         @Override
         public void onPrepared(MediaPlayer mp) {
+            setMute(mp);
             mp.setOnSeekCompleteListener(onSeekCompleteListener);
             listenerOnPrepared();
             getVideo().setDuration(videoView.getDuration());
@@ -142,6 +151,7 @@ public class SystemVideoView extends CoreVideoView {
     private MediaPlayer.OnInfoListener onInfoListener = new MediaPlayer.OnInfoListener() {
         @Override
         public boolean onInfo(MediaPlayer mp, int what, int extra) {
+            setMute(mp);
             List<OnVideoChangeListener> onVideoChangeListener = getOnVideoChangeListeners();
             if (onVideoChangeListener == null) {
                 return false;

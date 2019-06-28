@@ -1,6 +1,7 @@
 package com.jewel.mplayer;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -29,6 +30,7 @@ public abstract class CoreVideoView extends FrameLayout implements IControl, IAt
 
     public CoreVideoView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        setBackgroundColor(Color.BLACK);
     }
 
     /**
@@ -90,6 +92,24 @@ public abstract class CoreVideoView extends FrameLayout implements IControl, IAt
      */
     public boolean isPaused() {
         return getVideo().getCurrentState() == States.PAUSED;
+    }
+
+    /**
+     * 设置静音
+     *
+     * @param isMute 是否静音
+     */
+    public void setMute(boolean isMute) {
+        if (getVideo() != null) {
+            getVideo().setMute(isMute);
+        }
+    }
+
+    /**
+     * 是否静音
+     */
+    public boolean isMute() {
+        return getVideo() != null && getVideo().isMute();
     }
 
     /**
